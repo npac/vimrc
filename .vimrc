@@ -1,5 +1,4 @@
 " Configuration file for Vi Improved, save as ~/.vimrc to use.
-" Written on 2014-07-16 by Miko Bartnicki <mikobartnicki@gmail.com>.
 
 " use Vim mode instead of pure Vi, it must be the first instruction
 set nocompatible
@@ -13,6 +12,7 @@ set showmode " show insert/replace/visual mode
 if has('mouse')
   set mouse=a
 endif
+set spell spelllang=en_us "enable spell check
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
@@ -111,7 +111,7 @@ nnoremap <F5> Vip:sort i<CR>
 noremap <F8> :nohl<CR>
 inoremap <F8> <Esc>:nohl<CR>a
 
-" press F12 to toggle showing the non-printable charactes
+" press F12 to toggle showing the non-printable characters
 noremap <F12> :set list!<CR>
 inoremap <F12> <Esc>:set list!<CR>a
 
