@@ -56,14 +56,6 @@ set number "enable linenumber
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 " A buffer becomes hidden when it is abandoned
 set hid
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " tuning for gVim only
 if has('gui_running')
@@ -175,12 +167,3 @@ let g:ctrlp_working_path_mode = 'rw'
 " number.vim configuration
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 let g:enable_numbers = 0
-
-" helper functions
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
