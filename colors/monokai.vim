@@ -107,3 +107,7 @@ hi cssValueLength ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE g
 hi cssCommonAttr ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi elixirAtom ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi SpellBad   ctermbg=NONE cterm=underline ctermfg=125
+hi SpellCap   ctermbg=NONE cterm=underline ctermfg=25
+hi SpellLocal ctermbg=NONE cterm=underline ctermfg=31
+hi SpellRare  ctermbg=NONE cterm=underline ctermfg=96
