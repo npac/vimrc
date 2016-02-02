@@ -161,6 +161,10 @@ Plug '~/my-prototype-plugin'
 call plug#end()
 
 " plugin specific configuration
+"
+"Ultisnip
+let g:UltiSnipsExpandTrigger="<tab>"
+
 " ctrlp configuration
 let g:ctrlp_working_path_mode = 'rw'
 
