@@ -24,7 +24,7 @@ hi StatusLineNC ctermfg=231 ctermbg=241 cterm=NONE guifg=#f8f8f2 guibg=#64645e g
 hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
 hi IncSearch ctermfg=235 ctermbg=186 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
-hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi Search ctermfg=NONE ctermbg=yellow cterm=NONE guifg=NONE guibg=NONE gui=underline
 hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Folded ctermfg=242 ctermbg=235 cterm=NONE guifg=#75715e guibg=#272822 gui=NONE
 hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
@@ -106,7 +106,23 @@ hi cssClassName ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui
 hi cssValueLength ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi elixirAtom ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi elixirBlockDefinition ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirAtom ctermfg=141 ctermbg=NONE cterm=bold guifg=#ae81ff guibg=NONE gui=NONE
+hi elixirKeyword ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirPrivateDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirModuleDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirProtocolDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirImplDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirRecordDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirPrivateRecordDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirMacroDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirPrivateMacroDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirDelegateDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirOverridableDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirExceptionDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirCallbackDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
+hi elixirStructDefine ctermfg=197 ctermbg=NONE cterm=bold guifg=#f92672 guibg=NONE gui=NONE
 hi SpellBad   ctermbg=NONE cterm=underline ctermfg=125
 hi SpellCap   ctermbg=NONE cterm=underline ctermfg=25
 hi SpellLocal ctermbg=NONE cterm=underline ctermfg=31

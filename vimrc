@@ -46,10 +46,6 @@ filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
 filetype indent on " automatically indent code
 
-" syntax highlighting
-colorscheme monokai " set color scheme, must be installed first
-syntax enable " enable syntax highlighting
-
 set number "enable linenumber
 
 " characters for displaying non-printable characters
@@ -127,12 +123,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'elixir-lang/vim-elixir'
 Plug 'vim-airline/vim-airline'
-Plug 'sickill/vim-monokai'
 Plug 'myusuf3/numbers.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
-
+Plug 'vim-scripts/perl-support.vim'
+Plug 'scrooloose/nerdcommenter'
 " Make sure you use single quotes
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
@@ -163,6 +159,10 @@ Plug '~/my-prototype-plugin'
 call plug#end()
 
 " plugin specific configuration
+
+set background=dark " dark background for console
+colorscheme monokai " set color scheme
+syntax enable " enable syntax highlighting
 "
 "Ultisnip
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -184,3 +184,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
+
+"perl related checkers
+let g:syntastic_perl_checkers = ['perl', 'podchecker']
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_lib_path = [ './lib', './lib/auto' ]

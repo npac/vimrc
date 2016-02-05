@@ -12,8 +12,9 @@ fi
 # create symlink
 ln -s $BASEDIR/vimrc ~/.vimrc
 
-# copy custom molokai colortheme
-cp -R $BASEDIR/colors ~/.vim/
+#custom molokai colortheme
+mkdir -p ~/.vim/colors
+ln -s $BASEDIR/colors/monokai.vim ~/.vim/colors/monokai.vim
 
 #start vim and trigger plugin install, exit after installation
 vim +PlugInstall +qa
