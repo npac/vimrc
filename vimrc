@@ -12,7 +12,7 @@ set showmode " show insert/replace/visual mode
 if has('mouse')
   set mouse=a
 endif
-set spell spelllang=en_us "enable spell check
+"set spell spelllang=en_us "enable spell check
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
@@ -132,6 +132,8 @@ Plug 'scrooloose/nerdcommenter'
 " Make sure you use single quotes
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'dahu/vim-asciidoc'
+Plug 'vim-scripts/loremipsum'
 
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
