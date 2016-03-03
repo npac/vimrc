@@ -54,6 +54,10 @@ set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 " A buffer becomes hidden when it is abandoned
 set hid
 
+" all project specific vimrc configuration
+set exrc
+set secure
+
 " tuning for gVim only
 if has('gui_running')
         set background=light " light background for GUI
@@ -137,6 +141,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'dahu/vim-asciidoc'
 Plug 'vim-scripts/loremipsum'
+Plug 'majutsushi/tagbar'
 
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -187,7 +192,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
