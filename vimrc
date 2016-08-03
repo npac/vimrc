@@ -20,6 +20,7 @@ set fileencoding=utf-8 " encoding used when saving file
 set nobackup " do not keep the backup~ file
 set nowb
 set noswapfile
+set viminfo+=n~/.vim/viminfo
 
 " edit settings
 set backspace=indent,eol,start " backspacing over everything in insert mode
@@ -52,6 +53,10 @@ set number "enable linenumber
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 " A buffer becomes hidden when it is abandoned
 set hid
+
+" all project specific vimrc configuration
+set exrc
+set secure
 
 " tuning for gVim only
 if has('gui_running')
@@ -103,16 +108,18 @@ inoremap <F4> <Esc>mqggVG=`qzza
 vnoremap <F5> :sort i<CR>
 nnoremap <F5> Vip:sort i<CR>
 
-" press F8 to turn the search results highlight off
-noremap <F8> :nohl<CR>
-inoremap <F8> <Esc>:nohl<CR>a
+" press F7 to turn the search results highlight off
+noremap <F7> :nohl<CR>
+inoremap <F7> <Esc>:nohl<CR>a
 
-" press F12 to toggle showing the non-printable characters
-noremap <F12> :set list!<CR>
-inoremap <F12> <Esc>:set list!<CR>a
+"select buffer
+nnoremap <F5> :buffers<CR>:buffer<Space>
+" press F11 to toggle showing the non-printable characters
+noremap <F11> :set list!<CR>
+inoremap <F11> <Esc>:set list!<CR>a
 
 " Run iex with current file as argument
-map \r :!iex %<Enter>
+map \r :!iex -S mix<Enter>
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -132,6 +139,9 @@ Plug 'scrooloose/nerdcommenter'
 " Make sure you use single quotes
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'dahu/vim-asciidoc'
+Plug 'vim-scripts/loremipsum'
+Plug 'majutsushi/tagbar'
 
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -152,6 +162,8 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+Plug 'jlanzarotta/bufexplorer'
+
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
@@ -169,7 +181,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 " ctrlp configuration
 let g:ctrlp_working_path_mode = 'rw'
-
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*     " MacOSX/Linux
 " number.vim configuration
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 let g:enable_numbers = 0
@@ -180,7 +192,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
@@ -189,3 +201,6 @@ let g:syntastic_enable_elixir_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_lib_path = [ './lib', './lib/auto' ]
+
+"bufexplorer
+nnoremap <silent> <F12> :BufExplorer<CR>
