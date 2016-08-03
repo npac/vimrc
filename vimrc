@@ -12,7 +12,7 @@ set showmode " show insert/replace/visual mode
 if has('mouse')
   set mouse=a
 endif
-set spell spelllang=en_us "enable spell check
+"set spell spelllang=en_us "enable spell check
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
