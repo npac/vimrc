@@ -194,9 +194,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_elixir_checkers = ['elixir']
+"let g:syntastic_elixir_elixir_args = '+elixirc'
 let g:syntastic_enable_elixir_checker = 1
-
+let g:syntastic_elixir_checkers = ['elixir']
+"let g:syntastic_elixir_elixir_args='iargs /usr/local/bin/elixirc'
+let g:syntastic_enable_balloons = 1
+let g:syntastic_auto_jump = 1
+let g:syntastic_loc_list_height = 3
+#let g:syntastic_debug = 1
 "perl related checkers
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_enable_perl_checker = 1
